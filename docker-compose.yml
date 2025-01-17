@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.4.3
+    container_name: db
+    domainname: db
+    hostname: db
+    restart: always
+    environment:
+      MYSQL_DATABASE: cinema_db
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: P@ssw0rd
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web_app:
+    build: .
+    container_name: web_app
+    domainname: web_app
+    hostname: web_app
+    command: "./start.sh"
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_HOST=db
+      - DB_NAME=cinema_db
+      - DB_USER=root
+      - DB_PASSWORD=P@ssw0rd
+
+volumes:
+  mysql_data:

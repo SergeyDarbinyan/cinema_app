@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "c7696b7b-bdb2-41f4-bf63-58dd78fdeefa",
+		"name": "Cinema_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41122758"
+	},
+	"item": [
+		{
+			"name": "room_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/rooms",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "room_id",
+							"value": "7",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "room_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"room_name\": \"blue_room\"   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/rooms",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "room_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"room_id\": 4,\n    \"room_name\": \"white_room\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/rooms",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "room_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/rooms?room_id=7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "room_id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "movie_id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_name\": \"Korupcia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_id\": 3,\n    \"movie_name\": \"Spider Man 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/movies?movie_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "movie_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event_manage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"event_id\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/events",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"events"
+					],
+					"query": [
+						{
+							"key": "event_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_id\": 3,\n    \"room_id\": 3,\n    \"time\":\"2025-01-20 20:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/events",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"events"
+					],
+					"query": [
+						{
+							"key": "movie_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "room_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "time",
+							"value": "2025-01-20 15:30",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/events?event_id=4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"events"
+					],
+					"query": [
+						{
+							"key": "event_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"users"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\": \"Gago\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/users?user_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"users"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservation_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/reservations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "room_id",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "seat_id",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservation_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"event_id\" : 3,\n    \"seat_id\": 163,\n    \"user_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage/reservations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservation_manage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/manage/reservations?reservation_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage",
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "reservation_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
